@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nuveo Resume Analyzer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="nuveo-container">
+  <img src="logo.png" alt="Nuveo Logo" class="nuveo-logo" />
+  <h2>Nuveo Resume Analyzer</h2>
+  <div class="subtitle">Get instant, AI-powered feedback on your resume</div>
+  <div class="dropzone" id="dropzone">
+    <span id="dropzoneText">Drag & drop your PDF here<br>or click to select</span>
+    <input type="file" id="resumeInput" accept=".pdf" style="display: none;" />
+  </div>
+  <button id="analyzeBtn">Analyze</button>
+  <div id="progressBarWrapper" style="width:92%; margin: 8px auto 0; height:10px; background:#f3f4f6; border-radius:6px; display:none; overflow:hidden;">
+  <div id="progressBar" style="height:100%; width:0%; background:linear-gradient(90deg,#22c55e,#2563eb); border-radius:6px; transition:width 0.4s;"></div>
+</div>
+  <div id="result">Upload a <b>.pdf</b> file and click Analyze</div>
+  <button id="viewFullAnalysisBtn" style="display:none;">View Full Analysis</button>
+</div>
+<div id="onboardingOverlay" style="display:none;">
+  <div class="onboarding-modal">
+    <h3>Welcome to Nuveo!</h3>
+    <ol>
+      <li>📝 <b>Upload</b> your PDF resume (drag & drop or click)</li>
+      <li>🤖 <b>Analyze</b> with instant, AI-powered feedback</li>
+      <li>📄 <b>Download</b> a professional, ready-to-use report</li>
+    </ol>
+    <button id="closeOnboardingBtn">Let’s Start!</button>
+  </div>
+</div>
+<div id="supportBlock" style="margin-top:18px; text-align:center;">
+  <a href="mailto:support@nuveo.me" style="font-size:13px; color:#2466e0; text-decoration:underline; cursor:pointer;">
+    Need help? Contact support
+  </a>
+</div>
+<a href="#" id="faqLink" style="font-size:13px; margin-left:12px; color:#2466e0; text-decoration:underline;">FAQ</a>
+<div id="faqModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(50,90,200,0.11); z-index:99; align-items:center; justify-content:center;">
+  <div style="background:#fff; border-radius:13px; padding:24px 20px 20px 20px; max-width:340px; margin:80px auto; box-shadow:0 2px 12px #ccd8f4;">
+    <h3 style="color:#2466e0; font-size:17px; margin-top:0;">FAQ</h3>
+    <div style="font-size:14px; color:#333; margin-bottom:6px;">
+      <b>Is my data safe?</b><br>
+      We NEVER store or share your resume files. All analysis happens securely and is ONLY visible to you.<br><br>
+      <b>Who built Nuveo?</b><br>
+      Nuveo is built by an independent founder passionate about helping job seekers win.<br><br>
+      <b>How does the AI work?</b><br>
+      We use advanced language models on the base of OpenAI API to analyze your resume and give actionable, personalized feedback.<br><br>
+      <b>Need more help?</b><br>
+      <a href="mailto:support@nuveo.me" style="color:#2466e0; text-decoration:underline;">Contact support</a>
+    </div>
+    <button id="closeFaqBtn" style="margin-top:8px; background:#2466e0; color:#fff; border:none; border-radius:8px; padding:6px 16px; font-size:14px; cursor:pointer;">Close</button>
+  </div>
+</div>
+  <script src="libs/jspdf.umd.min.js"></script>
+  <script src="pdfjs/pdf.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

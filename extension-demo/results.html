@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nuveo Full Analysis</title>
+  <link rel="stylesheet" href="results.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Nuveo Resume Analysis</h2>
+    <div id="fileName"></div>
+    <div id="date"></div>
+    <pre id="analysisText"></pre>
+    <button id="downloadPdfBtn">Download as PDF</button>
+
+    <div id="paywallBlock" style="margin-top: 24px; text-align: center;">
+  <div style="font-size: 16px; margin-bottom: 12px;">
+    To download your full analysis as a PDF, please purchase access.
+  </div>
+  <a href="https://bahromov3.gumroad.com/l/vxjfxx" target="_blank" id="gumroadBuyBtn"
+     style="display:inline-block; background:#2563eb; color:#fff; padding:10px 26px; font-size:17px; border-radius:9px; text-decoration:none; margin-bottom:14px; font-weight:600;">
+    Buy&Download ($2.99)
+  </a>
+  <div style="margin:13px 0 7px 0; font-size:15px;">Already purchased? Enter your license key:</div>
+  <input id="licenseKeyInput" type="text" placeholder="Paste license key here"
+         style="padding:8px 9px; border-radius:6px; border:1.3px solid #d1d5db; width:70%; max-width:240px; font-size:15px;">
+  <button id="unlockBtn" style="background:#22c55e; color:#fff; border:none; border-radius:7px; font-size:15px; padding:8px 20px; margin-left:7px; cursor:pointer;">
+    Unlock & Download
+  </button>
+  <div id="licenseMsg" style="font-size:14px; margin-top:10px; color:#ea580c;"></div>
+</div>
+  </div>
+  <div id="feedbackBlock" style="display:none;">
+  <div style="margin-bottom:7px; font-size:15px;">Was this helpful?</div>
+  <button class="feedback-btn" id="feedback-yes">👍 Yes</button>
+  <button class="feedback-btn" id="feedback-no">👎 No</button>
+  <textarea id="feedbackComment" rows="2" placeholder="Optional: Tell us more..." style="width:98%; margin-top:9px; border-radius:7px; border:1.3px solid #d1d5db; resize:none; font-size:14px; padding:5px;"></textarea>
+  <div id="feedbackThanks" style="display:none; color:#22c55e; margin-top:10px; font-size:14px;">
+    Thank you for your feedback!
+  </div>
+</div>
+<div id="supportBlock" style="margin-top:18px; text-align:center;">
+  <a href="mailto:support@nuveo.me" style="font-size:13px; color:#2466e0; text-decoration:underline; cursor:pointer;">
+    Need help? Contact support
+  </a>
+</div>
+<a href="#" id="faqLink" style="font-size:13px; margin-left:12px; color:#2466e0; text-decoration:underline;">FAQ</a>
+<div id="faqModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(50,90,200,0.11); z-index:99; align-items:center; justify-content:center;">
+  <div style="background:#fff; border-radius:13px; padding:24px 20px 20px 20px; max-width:340px; margin:80px auto; box-shadow:0 2px 12px #ccd8f4;">
+    <h3 style="color:#2466e0; font-size:17px; margin-top:0;">FAQ</h3>
+    <div style="font-size:14px; color:#333; margin-bottom:6px;">
+      <b>Is my data safe?</b><br>
+      We NEVER store or share your resume files. All analysis happens securely and is ONLY visible to you.<br><br>
+      <b>Who built Nuveo?</b><br>
+      Nuveo is built by an independent founder passionate about helping job seekers win.<br><br>
+      <b>How does the AI work?</b><br>
+      We use advanced language models on the base of OpenAI API to analyze your resume and give actionable, personalized feedback.<br><br>
+      <b>Need more help?</b><br>
+      <a href="mailto:support@nuveo.me" style="color:#2466e0; text-decoration:underline;">Contact support</a>
+    </div>
+    <button id="closeFaqBtn" style="margin-top:8px; background:#2466e0; color:#fff; border:none; border-radius:8px; padding:6px 16px; font-size:14px; cursor:pointer;">Close</button>
+  </div>
+</div>
+  <script src="libs/jspdf.umd.min.js"></script>
+  <script src="pdfjs/pdf.js"></script>
+  <script src="results.js"></script>
+</body>
+</html>

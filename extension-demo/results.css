@@ -1,0 +1,111 @@
+body {
+  background: #f4f7fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #fff;
+  max-width: 540px;
+  margin: 32px auto 0 auto;
+  padding: 32px 32px 28px 32px;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(60,100,180,0.09), 0 1.5px 6px rgba(30,80,200,0.05);
+  text-align: left;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #2466e0;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+
+#fileName, #date {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 7px;
+  text-align: center;
+}
+
+pre#analysisText {
+  background: #f7faff;
+  border-radius: 10px;
+  padding: 18px 16px;
+  font-size: 15px;
+  color: #212529;
+  overflow-x: auto;
+  margin-top: 16px;
+  margin-bottom: 22px;
+  white-space: pre-wrap;
+  line-height: 1.55;
+  border: 1.5px solid #e2e8f0;
+}
+
+#downloadPdfBtn {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 0;
+  width: 100%;
+  background: linear-gradient(90deg, #22c55e, #228be6);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 1px 8px #c7f9d8;
+  transition: background 0.15s;
+}
+#downloadPdfBtn:hover {
+  background: linear-gradient(90deg, #228be6, #22c55e);
+}
+
+.feedback-btn {
+  background: #f3f4f6;
+  border: 1.5px solid #d1d5db;
+  border-radius: 7px;
+  color: #222;
+  font-size: 18px;
+  padding: 4px 16px;
+  margin-right: 7px;
+  cursor: pointer;
+  transition: background 0.17s, border-color 0.17s;
+}
+.feedback-btn:hover {
+  background: #e0e7ff;
+  border-color: #2563eb;
+}
+
+#faqModal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(50,90,200,0.11);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.analysis-blur {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.6;
+  position: relative;
+}
+.analysis-blur::after {
+  content: "🔒 Unlock to view full analysis";
+  position: absolute;
+  left: 0; right: 0; top: 40%; text-align: center;
+  color: #2466e0;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.85);
+  padding: 30px 0 20px 0;
+  z-index: 5;
+}

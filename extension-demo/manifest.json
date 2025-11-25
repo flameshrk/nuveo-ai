@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Nuveo Resume Analyzer (Demo)",
+  "version": "1.0.0",
+  "description": "Demo version of an AI-powered Chrome extension for resume analysis.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Nuveo Resume Analyzer"
+  },
+  "permissions": []
+}
